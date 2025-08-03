@@ -10,6 +10,9 @@ export const esClient = new Client({
     username: ELASTIC_CLIENT_USERNAME,
     password: ELASTIC_CLIENT_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
 
