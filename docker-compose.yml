@@ -6,7 +6,7 @@ services:
     container_name: es
     environment:
       - discovery.type=single-node
-      - ELASTIC_PASSWORD=elastic123
+      - ELASTIC_PASSWORD=${ELASTIC_CLIENT_PASSWORD}
       - xpack.security.enabled=true
       - logger.level=warn
     ports:
@@ -16,15 +16,9 @@ services:
     container_name: real_estate_backend
     ports:
       - 5001:5001
-    restart: on-failure  
-    environment:
-      - JWT_SECRET=deepakMessenger
-      - NODE_ENV=development
-      - PORT=5001
-      - MONGO_URI=mongodb+srv://deepak:deep_123@cluster0.fyotr.mongodb.net/real_estate_api?retryWrites=true&w=majority
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - ELASTIC_CLIENT_USERNAME=elastic
-      - ELASTIC_CLIENT_PASSWORD=elastic123
+    restart: on-failure
+    env_file:
+      - .env  
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
