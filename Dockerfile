@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5001
 
 # Default command (for production)
-CMD [ "node", "src/index.js" ]
+CMD [ "npm", "start" ]
