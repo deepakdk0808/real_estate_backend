@@ -36,6 +36,23 @@ A robust backend API for a real estate application that supports user authentica
 - ElasticSearch (for auto-suggestions)
 
 ---
+## 📦 .env variables
+
+# JWT secret key for signing tokens
+JWT_SECRET=your_jwt_secret_here
+
+# MongoDB connection URI
+MONGO_URI=your_mongodb_uri_here
+
+# Server port
+PORT=5000
+
+# ElasticSearch configuration
+ELASTICSEARCH_URL=https://your-elasticsearch-endpoint.com
+ELASTIC_CLIENT_USERNAME=your_elastic_username
+ELASTIC_CLIENT_PASSWORD=your_elastic_password
+
+---
 
 ## 📘 API Endpoints
 
