@@ -49,7 +49,9 @@ PORT=5000
 
 ### ElasticSearch configuration
 ELASTICSEARCH_URL=https://your-elasticsearch-endpoint.com
+
 ELASTIC_CLIENT_USERNAME=your_elastic_username
+
 ELASTIC_CLIENT_PASSWORD=your_elastic_password
 
 ---
